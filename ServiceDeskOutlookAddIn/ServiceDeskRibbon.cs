@@ -16,6 +16,8 @@ namespace ServiceDeskOutlookAddIn
 
         private void CreateClaimButton_Click(object sender, RibbonControlEventArgs e)
         {
+            var cntrl = new UserControl1();
+            
             MessageBox.Show("Помогите!","Нужна помощь!");
         }
     }
