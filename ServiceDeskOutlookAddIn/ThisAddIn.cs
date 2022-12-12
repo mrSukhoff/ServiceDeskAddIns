@@ -35,7 +35,7 @@ namespace ServiceDeskOutlookAddIn
 
         #endregion
 
-        public void CreateSendItem(Outlook.Application Application)
+        public void CreateSendItem()
         {
             Outlook.MailItem mail = null;
             Outlook.Recipients mailRecipients = null;

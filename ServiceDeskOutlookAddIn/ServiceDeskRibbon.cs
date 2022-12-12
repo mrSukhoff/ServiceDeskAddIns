@@ -18,9 +18,9 @@ namespace ServiceDeskOutlookAddIn
         private void CreateClaimButton_Click(object sender, RibbonControlEventArgs e)
         {
             MessageBox.Show("Помогите!", "Нужна помощь!");
-            //var application = (Microsoft.Office.Interop.Outlook.Application)sender;
+            Globals.ThisAddIn.CreateSendItem();
             //var cntrl = new UserControl1();
-            //ThisAddIn.CreateSendItem(application);
+
         }
         
 
