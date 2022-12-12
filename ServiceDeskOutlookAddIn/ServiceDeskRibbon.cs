@@ -19,7 +19,8 @@ namespace ServiceDeskOutlookAddIn
         {
             MessageBox.Show("Помогите!", "Нужна помощь!");
             Globals.ThisAddIn.CreateSendItem();
-            //var cntrl = new UserControl1();
+            var cntrl = new UserControl1();
+            cntrl.
 
         }
         
