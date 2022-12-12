@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Windows.Forms;
 
@@ -16,9 +17,12 @@ namespace ServiceDeskOutlookAddIn
 
         private void CreateClaimButton_Click(object sender, RibbonControlEventArgs e)
         {
-            var cntrl = new UserControl1();
-            
-            MessageBox.Show("Помогите!","Нужна помощь!");
+            MessageBox.Show("Помогите!", "Нужна помощь!");
+            //var application = (Microsoft.Office.Interop.Outlook.Application)sender;
+            //var cntrl = new UserControl1();
+            //ThisAddIn.CreateSendItem(application);
         }
+        
+
     }
 }

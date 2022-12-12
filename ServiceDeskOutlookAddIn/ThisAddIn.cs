@@ -5,6 +5,7 @@ using System.Text;
 using System.Xml.Linq;
 using Outlook = Microsoft.Office.Interop.Outlook;
 using Office = Microsoft.Office.Core;
+using System.Runtime.InteropServices;
 
 namespace ServiceDeskOutlookAddIn
 {
@@ -31,7 +32,43 @@ namespace ServiceDeskOutlookAddIn
             this.Startup += new System.EventHandler(ThisAddIn_Startup);
             this.Shutdown += new System.EventHandler(ThisAddIn_Shutdown);
         }
-        
+
         #endregion
+
+        public void CreateSendItem(Outlook.Application Application)
+        {
+            Outlook.MailItem mail = null;
+            Outlook.Recipients mailRecipients = null;
+            Outlook.Recipient mailRecipient = null;
+            try
+            {
+                mail = Application.CreateItem(Outlook.OlItemType.olMailItem)
+                    as Outlook.MailItem;
+                mail.Subject = "Тестовое обращение";
+                mailRecipients = mail.Recipients;
+                mailRecipient = mailRecipients.Add("m.sukharev@pharmasyntez.com");
+                mailRecipient.Resolve();
+                if (mailRecipient.Resolved)
+                {
+                    mail.Send();
+                }
+                else
+                {
+                    System.Windows.Forms.MessageBox.Show(
+                        "There is no such record in your address book.");
+                }
+            }
+            catch (Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message,
+                     "An exception is occured in the code of add-in.");
+            }
+            finally
+            {
+                if (mailRecipient != null) Marshal.ReleaseComObject(mailRecipient);
+                if (mailRecipients != null) Marshal.ReleaseComObject(mailRecipients);
+                if (mail != null) Marshal.ReleaseComObject(mail);
+            }
+        }
     }
 }
