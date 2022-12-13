@@ -18,16 +18,16 @@ namespace ServiceDeskOutlookAddIn
     /// <summary>
     /// Логика взаимодействия для UserControl1.xaml
     /// </summary>
-    public partial class UserControl1 : UserControl
+    public partial class RequestWindow : Window
     {
-        public UserControl1()
+        public RequestWindow()
         {
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void SendButton_click(object sender, RoutedEventArgs e)
         {
-
+            Globals.ThisAddIn.CreateSendItem();
         }
     }
 }
