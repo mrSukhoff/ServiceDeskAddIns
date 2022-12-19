@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<services>
+	<service>
+		<name>1</name>
+		<description>Услуга №1</description>
+	</service>
+	<service>
+		<name>2</name>
+		<description>Услуга №2</description>
+	</service>
+</services>

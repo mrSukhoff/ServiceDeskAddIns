@@ -14,33 +14,21 @@
         <TextBlock Grid.Column="0" HorizontalAlignment="Center" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Center" ScrollViewer.VerticalScrollBarVisibility="Disabled" MinWidth="7" Height="25"/>
         <Grid Grid.Column="1">
             <Grid.RowDefinitions>
+                <RowDefinition/>
                 <RowDefinition Height="5*"/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition/>
-                    <RowDefinition Height="2*"/>
-                    <RowDefinition/>
-                    <RowDefinition Height="2*"/>
-                    <RowDefinition/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
-                <Button Grid.Row="1" Grid.Column="0" Content="Button1" Width="100" Height="100" Click="SendButton_click" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                <Button Grid.Row="1" Grid.Column="1" Content="Button2" Width="100" Height="100" Click="SendButton_click" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                <Button Grid.Row="1" Grid.Column="2" Content="Button3" Width="100" Height="100" Click="SendButton_click" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                <Button Grid.Row="1" Grid.Column="3" Content="Button4" Width="100" Height="100" Click="SendButton_click" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                <Button Grid.Row="3" Grid.Column="0" Content="Button5" Width="100" Height="100" Click="SendButton_click" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                <Button Grid.Row="3" Grid.Column="1" Content="Button6" Width="100" Height="100" Click="SendButton_click" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                <Button Grid.Row="3" Grid.Column="2" Content="Button7" Width="100" Height="100" Click="SendButton_click" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-            </Grid>
-            <Button Grid.Row="1" Content="Далее" HorizontalAlignment="Left" Margin="512,0,0,0" VerticalAlignment="Center" Height="38" Width="100"/>
-            <Button Grid.Row="1" Content="Назад" HorizontalAlignment="Left" Margin="376,0,0,0" VerticalAlignment="Center" Height="38" Width="100"/>
+           <WrapPanel Grid.Row="1">
+                <Button Content="Button1" Width="100" Height="100" Click="SendButton_click" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="30,30,30,30"/>
+                <Button Content="Button2" Width="100" Height="100" Click="SendButton_click" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="30,30,30,30"/>
+                <Button Content="Button3" Width="100" Height="100" Click="SendButton_click" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="30,30,30,30"/>
+                <Button Content="Button4" Width="100" Height="100" Click="SendButton_click" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="30,30,30,30"/>
+                <Button Content="Button5" Width="100" Height="100" Click="SendButton_click" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="30,30,30,30"/>
+                <Button Content="Button6" Width="100" Height="100" Click="SendButton_click" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="30,30,30,30"/>
+                <Button Content="Button7" Width="100" Height="100" Click="SendButton_click" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="30,30,30,30"/>
+            </WrapPanel>
+            <Button Grid.Row="2" Content="Далее" HorizontalAlignment="Left" Margin="512,0,0,0" VerticalAlignment="Center" Height="38" Width="100"/>
+            <Button Grid.Row="2" Content="Назад" HorizontalAlignment="Left" Margin="376,0,0,0" VerticalAlignment="Center" Height="38" Width="100"/>
         </Grid>
 
 
